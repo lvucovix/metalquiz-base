@@ -47,10 +47,11 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
-            <form onSubmit={function (infosDoEvento) {
+            <form onSubmit={ (infosDoEvento) => {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo uma submissão por meio do react');
+              // router manda pra outra página
             }}
             >
               <Input
